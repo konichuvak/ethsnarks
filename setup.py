@@ -20,6 +20,7 @@ setuptools.setup(
     install_requires=[
         'py_ecc',
         'bitstring',
-        'pysha3',
+        'pysha3; python_version < "3.9"',
+        'safe-pysha3; python_version >= "3.9"',
     ]
 )
