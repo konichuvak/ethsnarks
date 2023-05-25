@@ -16,7 +16,7 @@ Other implementations:
 
 from math import log2, floor
 from collections import namedtuple
-from pyblake2 import blake2b
+from hashlib import blake2b
 from ..field import SNARK_SCALAR_FIELD
 
 
@@ -95,7 +95,7 @@ def H(arg):
     if isinstance(arg, int):
         arg = arg.to_bytes(32, 'little')
     # XXX: ensure that (digest_size*8) >= log2(p)
-    hashed = blake2b(data=arg, digest_size=32).digest()
+    hashed = blake2b(arg, digest_size=32).digest()
     return int.from_bytes(hashed, 'little')
 
 

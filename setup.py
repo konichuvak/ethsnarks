@@ -21,6 +21,5 @@ setuptools.setup(
         'py_ecc',
         'bitstring',
         'pysha3',
-        'pyblake2'
     ]
 )
