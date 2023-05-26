@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="ethsnarks",
-    version="0.0.1",
+    name="py-ethsnarks",
+    version="0.0.2",
     author="HarryR",
     description="Python library for ethsnarks",
     long_description=long_description,
